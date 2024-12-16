@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="robots" content="noindex" />
+  </head>
+  <body>
+    <script>
+      var language = navigator.language || navigator.userLanguage;
+      language = language.substring(0, 2);
+      if (language == "fr") {
+        window.location.href = "fr/accueil.html"; // French
+      } else {
+        window.location.href = "en/home.html"; // everyone else : English
+      }
+    </script>
+  </body>
+</html>

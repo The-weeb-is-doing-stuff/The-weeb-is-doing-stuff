@@ -1,0 +1,580 @@
+body {
+  /*
+  "flex" permet de créer des zones avec des largeurs prédéfinis,
+  de faire respecter les positions dans l'axe Z
+  et bien plus encore
+  */
+
+  display: flex;
+  flex-direction: column;
+
+  background-color: var(--md-sys-color-surface);
+
+  /* initialiser une hauteur minimal permet de forcer la balise "pied de page" à être en fin de page */
+
+  min-height: 110vh;
+
+  margin: 0;
+  padding-top: 100px;
+  padding-left: 12%;
+  padding-right: 12%;
+
+  cursor: default;
+
+  color: var(--md-sys-color-on-background);
+  font-family: "Noto Sans", sans-serif;
+  text-align: left;
+}
+
+img {
+  width: 100%;
+}
+
+iframe {
+  border-radius: 24px;
+  border-style: solid;
+  border-color: var(--md-sys-color-primary-container);
+
+  height: 80vh;
+
+  margin-top: 16px;
+}
+
+p {
+  text-align: justify;
+}
+
+ul {
+  margin: 0 24px;
+  padding: 0;
+}
+
+li {
+  padding-bottom: 16px;
+}
+
+.horizontal1 {
+  display: grid;
+  grid-template-columns: auto auto auto;
+
+  column-gap: 16px;
+  row-gap: 24px;
+
+  margin-bottom: 24px;
+}
+
+.horizontal2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+
+  margin-bottom: 8px;
+}
+
+/****** en-tête ******/
+
+/*** bouton thème et couleurs ***/
+
+header {
+  z-index: 2;
+
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.theme {
+  display: flex;
+
+  position: fixed !important;
+
+  border-radius: 24px;
+
+  background-color: var(--md-sys-color-surface-container);
+
+  top: 0;
+  left: 0;
+
+  margin: 16px;
+}
+
+.theme svg {
+  width: 25px;
+  height: 25px;
+}
+
+.theme button {
+  display: block;
+
+  border: none;
+  border-radius: 16px;
+
+  background-color: var(--md-sys-color-primary-container);
+
+  margin: 8px;
+  padding: 16px;
+
+  cursor: pointer;
+
+  transition: filter ease-in-out 0.2s;
+}
+
+/*animer au sur-vol*/
+
+.theme button:hover {
+  filter: contrast(70%) hue-rotate(25deg);
+
+  transition: filter ease-in-out 0.2s;
+}
+
+/*** bar de navigation ***/
+
+.bar-de-navigation {
+  position: fixed !important;
+
+  top: 0;
+  left: 0;
+
+  width: 20%;
+
+  margin: 16px;
+  margin-left: 40%;
+  margin-right: 40%;
+}
+
+header ul {
+  overflow: hidden;
+  border-radius: 24px;
+  list-style-type: none;
+
+  margin: 0;
+
+  background-color: var(--md-sys-color-surface-container);
+}
+
+header li {
+  float: left;
+
+  width: calc(100% / 2);
+
+  padding: 0;
+}
+
+header li a {
+  display: block;
+
+  border-radius: 16px;
+
+  margin: 8px;
+  padding: 21px 8px;
+
+  cursor: pointer;
+
+  color: var(--md-sys-color-on-background);
+  text-align: center;
+  text-decoration: none;
+
+  transition: background-color ease-in-out 0.2s, color ease-in-out 0.2s;
+}
+
+/*animer au sur-vol du boutton et lorsque le boutton est actif*/
+
+header li a:hover,
+.active {
+  background-color: var(--md-sys-color-primary-container);
+
+  color: var(--md-sys-color-on-primary-container);
+
+  transition: background-color ease-in-out 0.2s, color ease-in-out 0.2s;
+}
+
+.active {
+  cursor: default;
+}
+
+/*** bouton langue ***/
+
+.lang {
+  position: fixed !important;
+
+  top: 0;
+  right: 0;
+
+  margin: 16px;
+}
+
+.lang li a {
+  padding: 21px;
+}
+
+/****** boîte1 ******/
+
+.boite1 {
+  z-index: 1;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  height: 90vh;
+
+  margin: 24px 0;
+}
+
+.boite1 a {
+  color: var(--md-sys-color-on-background);
+  text-decoration: none;
+  cursor: default;
+}
+
+.boite1 h1 {
+  margin: 0;
+
+  font-size: 200px;
+  font-family: "Charm", cursive;
+  text-align: center;
+}
+
+.boite1 h2 {
+  margin: 0;
+
+  font-size: 24px;
+  text-align: center;
+}
+
+/****** boîte2 ******/
+
+.boite2 {
+  z-index: 1;
+  float: left;
+
+  width: 45%;
+
+  margin: 24px 0;
+}
+
+.boite2 h1 {
+  float: left;
+
+  width: 100%;
+}
+
+/****** boîte3 ******/
+
+.boite3 {
+  z-index: 1;
+  float: right;
+
+  width: 45%;
+
+  margin: 24px 0;
+}
+
+.boite3 h1 {
+  float: left;
+
+  width: 100%;
+}
+
+.boite3 ul {
+  float: left;
+
+  width: 90%;
+}
+
+/****** boîte4 ******/
+
+.boite4 {
+  z-index: 1;
+  float: left;
+
+  margin-bottom: 48px;
+}
+
+.boite4 h1 {
+  float: left;
+
+  width: 100%;
+}
+
+.boite4 ul {
+  float: left;
+
+  width: 45%;
+}
+
+.boite4 img {
+  border-radius: 16px;
+
+  height: 450px;
+  object-fit: cover;
+}
+
+.boite4 figure {
+  float: right;
+
+  width: 45%;
+
+  margin: 0;
+
+  text-align: center;
+}
+
+/*la légende de la figure*/
+
+.boite4 figure figcaption {
+  margin-top: 8px;
+
+  font-size: 12px;
+}
+
+/****** logos ******/
+
+/*l'animation*/
+
+@keyframes slide {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-100%);
+  }
+}
+
+.logos {
+  overflow: hidden;
+  white-space: nowrap;
+  position: relative;
+
+  margin: 24px 0;
+
+  text-align: center;
+}
+
+/*placement des fondues*/
+
+.logos:before,
+.logos:after {
+  z-index: 1;
+  position: absolute;
+
+  top: 0;
+
+  height: 100%;
+  width: 250px;
+
+  content: "";
+}
+
+/*fondue avant*/
+
+.logos:before {
+  left: 0;
+
+  background: linear-gradient(
+    to left,
+    rgba(255, 255, 255, 0),
+    var(--md-sys-color-background)
+  );
+}
+
+/*fondue après*/
+
+.logos:after {
+  right: 0;
+
+  background: linear-gradient(
+    to right,
+    rgba(255, 255, 255, 0),
+    var(--md-sys-color-background)
+  );
+}
+
+/*pauser l'animation au sur-vol*/
+
+.logos:hover .logos_anime {
+  animation-play-state: paused;
+}
+
+.logos_anime {
+  display: inline-block;
+
+  margin: 16px 0;
+
+  animation: 35s slide infinite linear;
+}
+
+.logos_anime img {
+  width: 50px;
+
+  margin: 0 60px;
+}
+
+/****** pied de page ******/
+
+footer {
+  z-index: 2;
+  float: left;
+
+  border-radius: 24px;
+  background-color: var(--md-sys-color-surface-container);
+
+  height: fit-content;
+
+  margin-top: auto;
+  margin-bottom: 16px;
+  padding: 24px;
+
+  text-align: center;
+}
+
+footer svg {
+  width: 25px;
+
+  padding: 7px;
+}
+
+footer .social-icon {
+  display: block;
+
+  border-radius: 16px;
+  background-color: var(--md-sys-color-primary-container);
+
+  margin: 7px;
+  padding: 7px;
+
+  transition: filter ease-in-out 0.2s;
+}
+
+/*animer au sur-vol*/
+
+footer .social-icon:hover {
+  filter: contrast(70%) hue-rotate(25deg);
+
+  transition: filter ease-in-out 0.2s;
+}
+
+footer div a {
+  color: var(--text);
+  text-decoration: none;
+  font-weight: bold;
+
+  transition: color ease-in-out 0.2s;
+}
+
+footer div a:hover {
+  color: var(--md-sys-color-surface-tint);
+
+  transition: color ease-in-out 0.2s;
+}
+
+/****** cartes ******/
+
+.carte {
+  z-index: 1;
+  float: left;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+
+  border-radius: 24px;
+  background-color: var(--md-sys-color-surface-container);
+
+  padding: 16px;
+
+  color: var(--md-sys-color-on-background);
+  text-decoration: none;
+  font-weight: bold;
+
+  transition: background-color ease-in-out 0.2s, color ease-in-out 0.2s;
+}
+
+/*animer au sur-vol*/
+
+.carte:hover {
+  background-color: var(--md-sys-color-primary-container);
+  color: var(--md-sys-color-on-primary-container);
+
+  transition: background-color ease-in-out 0.2s, color ease-in-out 0.2s;
+}
+
+.carte img {
+  border-radius: 16px;
+
+  height: 400px;
+  object-fit: cover;
+
+  margin-bottom: 16px;
+}
+
+/****** autres appareils ******/
+
+@media (max-width: 1500px) {
+  body {
+    padding-left: 4%;
+    padding-right: 4%;
+  }
+  .boite1 h1 {
+    font-size: 120px;
+  }
+}
+
+@media (max-width: 1050px) {
+  .horizontal1 {
+    grid-template-columns: auto;
+  }
+
+  .theme {
+    display: none;
+  }
+
+  .bar-de-navigation {
+    width: 90%;
+
+    margin-left: 5%;
+    margin-right: 5%;
+  }
+
+  .lang {
+    display: none;
+  }
+
+  .boite1 h1 {
+    font-size: 90px;
+  }
+
+  .boite2 {
+    width: 100%;
+  }
+
+  .boite3 {
+    width: 100%;
+  }
+
+  .boite3 ul {
+    width: 90%;
+  }
+
+  .boite4 {
+    margin-top: 24px;
+  }
+
+  .boite4 ul {
+    width: 90%;
+  }
+
+  .boite4 figure {
+    float: left;
+
+    width: 100%;
+
+    margin-top: 16px;
+  }
+
+  .pc-uniquement {
+    display: none;
+  }
+}

@@ -1,0 +1,58 @@
+/*
+Thème générer avec
+https://m3.material.io/styles/color/resources
+et
+https://developer.apple.com/design/human-interface-guidelines/color
+*/
+
+[data-theme="dark"] {
+  --md-sys-color-primary: rgb(255 250 246);
+  --md-sys-color-surface-tint: rgb(227 196 109);
+  --md-sys-color-on-primary: rgb(0 0 0);
+  --md-sys-color-primary-container: rgb(231 200 112);
+  --md-sys-color-on-primary-container: rgb(0 0 0);
+  --md-sys-color-secondary: rgb(255 250 246);
+  --md-sys-color-on-secondary: rgb(0 0 0);
+  --md-sys-color-secondary-container: rgb(217 201 165);
+  --md-sys-color-on-secondary-container: rgb(0 0 0);
+  --md-sys-color-tertiary: rgb(240 255 237);
+  --md-sys-color-on-tertiary: rgb(0 0 0);
+  --md-sys-color-tertiary-container: rgb(177 212 178);
+  --md-sys-color-on-tertiary-container: rgb(0 0 0);
+  --md-sys-color-error: rgb(255 249 249);
+  --md-sys-color-on-error: rgb(0 0 0);
+  --md-sys-color-error-container: rgb(255 186 177);
+  --md-sys-color-on-error-container: rgb(0 0 0);
+  --md-sys-color-background: rgb(22 19 11);
+  --md-sys-color-on-background: rgb(234 225 212);
+  --md-sys-color-surface: rgb(22 19 11);
+  --md-sys-color-on-surface: rgb(255 255 255);
+  --md-sys-color-surface-variant: rgb(76 70 57);
+  --md-sys-color-on-surface-variant: rgb(255 250 246);
+  --md-sys-color-outline: rgb(211 202 184);
+  --md-sys-color-outline-variant: rgb(211 202 184);
+  --md-sys-color-shadow: rgb(0 0 0);
+  --md-sys-color-scrim: rgb(0 0 0);
+  --md-sys-color-inverse-surface: rgb(234 225 212);
+  --md-sys-color-inverse-on-surface: rgb(0 0 0);
+  --md-sys-color-inverse-primary: rgb(53 40 0);
+  --md-sys-color-primary-fixed: rgb(255 229 160);
+  --md-sys-color-on-primary-fixed: rgb(0 0 0);
+  --md-sys-color-primary-fixed-dim: rgb(231 200 112);
+  --md-sys-color-on-primary-fixed-variant: rgb(29 21 0);
+  --md-sys-color-secondary-fixed: rgb(246 229 191);
+  --md-sys-color-on-secondary-fixed: rgb(0 0 0);
+  --md-sys-color-secondary-fixed-dim: rgb(217 201 165);
+  --md-sys-color-on-secondary-fixed-variant: rgb(29 21 1);
+  --md-sys-color-tertiary-fixed: rgb(205 240 205);
+  --md-sys-color-on-tertiary-fixed: rgb(0 0 0);
+  --md-sys-color-tertiary-fixed-dim: rgb(177 212 178);
+  --md-sys-color-on-tertiary-fixed-variant: rgb(0 27 7);
+  --md-sys-color-surface-dim: rgb(22 19 11);
+  --md-sys-color-surface-bright: rgb(61 57 47);
+  --md-sys-color-surface-container-lowest: rgb(17 14 7);
+  --md-sys-color-surface-container-low: rgb(31 27 19);
+  --md-sys-color-surface-container: rgb(35 31 23);
+  --md-sys-color-surface-container-high: rgb(45 42 33);
+  --md-sys-color-surface-container-highest: rgb(56 52 43);
+}
