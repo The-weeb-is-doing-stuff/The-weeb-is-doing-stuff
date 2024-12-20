@@ -1,8 +1,8 @@
 body {
   /*
-  "flex" permet de créer des zones avec des largeurs prédéfinis,
-  de faire respecter les positions dans l'axe Z
-  et bien plus encore
+  "flex" allows creating areas with predefined widths,
+  enforcing positions along the Z-axis,
+  and much more
   */
 
   display: flex;
@@ -10,7 +10,7 @@ body {
 
   background-color: var(--md-sys-color-surface);
 
-  /* initialiser une hauteur minimal permet de forcer la balise "pied de page" à être en fin de page */
+  /* initializing a minimum height forces the "footer" tag to be at the bottom of the page */
 
   min-height: 110vh;
 
@@ -72,9 +72,9 @@ li {
   margin-bottom: 8px;
 }
 
-/****** en-tête ******/
+/****** header ******/
 
-/*** bouton thème et couleurs ***/
+/*** theme and color button ***/
 
 header {
   z-index: 2;
@@ -119,7 +119,7 @@ header {
   transition: filter ease-in-out 0.2s;
 }
 
-/*animer au sur-vol*/
+/*animate on hover*/
 
 .theme button:hover {
   filter: contrast(70%) hue-rotate(25deg);
@@ -127,9 +127,9 @@ header {
   transition: filter ease-in-out 0.2s;
 }
 
-/*** bar de navigation ***/
+/*** navigation bar ***/
 
-.bar-de-navigation {
+.navigation-bar {
   position: fixed !important;
 
   top: 0;
@@ -177,7 +177,7 @@ header li a {
   transition: background-color ease-in-out 0.2s, color ease-in-out 0.2s;
 }
 
-/*animer au sur-vol du boutton et lorsque le boutton est actif*/
+/*animate on button hover and when the button is active*/
 
 header li a:hover,
 .active {
@@ -192,7 +192,7 @@ header li a:hover,
   cursor: default;
 }
 
-/*** bouton langue ***/
+/*** language button ***/
 
 .lang {
   position: fixed !important;
@@ -207,9 +207,9 @@ header li a:hover,
   padding: 21px;
 }
 
-/****** boîte1 ******/
+/****** box1 ******/
 
-.boite1 {
+.box1 {
   z-index: 1;
 
   display: flex;
@@ -222,13 +222,13 @@ header li a:hover,
   margin: 24px 0;
 }
 
-.boite1 a {
+.box1 a {
   color: var(--md-sys-color-on-background);
   text-decoration: none;
   cursor: default;
 }
 
-.boite1 h1 {
+.box1 h1 {
   margin: 0;
 
   font-size: 200px;
@@ -236,182 +236,14 @@ header li a:hover,
   text-align: center;
 }
 
-.boite1 h2 {
+.box1 h2 {
   margin: 0;
 
   font-size: 24px;
   text-align: center;
 }
 
-/****** boîte2 ******/
-
-.boite2 {
-  z-index: 1;
-  float: left;
-
-  width: 45%;
-
-  margin: 24px 0;
-}
-
-.boite2 h1 {
-  float: left;
-
-  width: 100%;
-}
-
-/****** boîte3 ******/
-
-.boite3 {
-  z-index: 1;
-  float: right;
-
-  width: 45%;
-
-  margin: 24px 0;
-}
-
-.boite3 h1 {
-  float: left;
-
-  width: 100%;
-}
-
-.boite3 ul {
-  float: left;
-
-  width: 90%;
-}
-
-/****** boîte4 ******/
-
-.boite4 {
-  z-index: 1;
-  float: left;
-
-  margin-bottom: 48px;
-}
-
-.boite4 h1 {
-  float: left;
-
-  width: 100%;
-}
-
-.boite4 ul {
-  float: left;
-
-  width: 45%;
-}
-
-.boite4 img {
-  border-radius: 16px;
-
-  height: 450px;
-  object-fit: cover;
-}
-
-.boite4 figure {
-  float: right;
-
-  width: 45%;
-
-  margin: 0;
-
-  text-align: center;
-}
-
-/*la légende de la figure*/
-
-.boite4 figure figcaption {
-  margin-top: 8px;
-
-  font-size: 12px;
-}
-
-/****** logos ******/
-
-/*l'animation*/
-
-@keyframes slide {
-  from {
-    transform: translateX(0);
-  }
-  to {
-    transform: translateX(-100%);
-  }
-}
-
-.logos {
-  overflow: hidden;
-  white-space: nowrap;
-  position: relative;
-
-  margin: 24px 0;
-
-  text-align: center;
-}
-
-/*placement des fondues*/
-
-.logos:before,
-.logos:after {
-  z-index: 1;
-  position: absolute;
-
-  top: 0;
-
-  height: 100%;
-  width: 250px;
-
-  content: "";
-}
-
-/*fondue avant*/
-
-.logos:before {
-  left: 0;
-
-  background: linear-gradient(
-    to left,
-    rgba(255, 255, 255, 0),
-    var(--md-sys-color-background)
-  );
-}
-
-/*fondue après*/
-
-.logos:after {
-  right: 0;
-
-  background: linear-gradient(
-    to right,
-    rgba(255, 255, 255, 0),
-    var(--md-sys-color-background)
-  );
-}
-
-/*pauser l'animation au sur-vol*/
-
-.logos:hover .logos_anime {
-  animation-play-state: paused;
-}
-
-.logos_anime {
-  display: inline-block;
-
-  margin: 16px 0;
-
-  animation: 35s slide infinite linear;
-}
-
-.logos_anime img {
-  width: 50px;
-
-  margin: 0 60px;
-}
-
-/****** pied de page ******/
+/****** footer ******/
 
 footer {
   z-index: 2;
@@ -447,7 +279,7 @@ footer .social-icon {
   transition: filter ease-in-out 0.2s;
 }
 
-/*animer au sur-vol*/
+/*animate on hover*/
 
 footer .social-icon:hover {
   filter: contrast(70%) hue-rotate(25deg);
@@ -469,9 +301,9 @@ footer div a:hover {
   transition: color ease-in-out 0.2s;
 }
 
-/****** cartes ******/
+/****** cards ******/
 
-.carte {
+.cards {
   z-index: 1;
   float: left;
 
@@ -492,16 +324,16 @@ footer div a:hover {
   transition: background-color ease-in-out 0.2s, color ease-in-out 0.2s;
 }
 
-/*animer au sur-vol*/
+/*animate on hover*/
 
-.carte:hover {
+.cards:hover {
   background-color: var(--md-sys-color-primary-container);
   color: var(--md-sys-color-on-primary-container);
 
   transition: background-color ease-in-out 0.2s, color ease-in-out 0.2s;
 }
 
-.carte img {
+.cards img {
   border-radius: 16px;
 
   height: 400px;
@@ -510,14 +342,15 @@ footer div a:hover {
   margin-bottom: 16px;
 }
 
-/****** autres appareils ******/
+/****** other devices ******/
 
 @media (max-width: 1500px) {
   body {
     padding-left: 4%;
     padding-right: 4%;
   }
-  .boite1 h1 {
+
+  .box1 h1 {
     font-size: 120px;
   }
 }
@@ -531,7 +364,7 @@ footer div a:hover {
     display: none;
   }
 
-  .bar-de-navigation {
+  .navigation-bar {
     width: 90%;
 
     margin-left: 5%;
@@ -542,39 +375,7 @@ footer div a:hover {
     display: none;
   }
 
-  .boite1 h1 {
+  .box1 h1 {
     font-size: 90px;
-  }
-
-  .boite2 {
-    width: 100%;
-  }
-
-  .boite3 {
-    width: 100%;
-  }
-
-  .boite3 ul {
-    width: 90%;
-  }
-
-  .boite4 {
-    margin-top: 24px;
-  }
-
-  .boite4 ul {
-    width: 90%;
-  }
-
-  .boite4 figure {
-    float: left;
-
-    width: 100%;
-
-    margin-top: 16px;
-  }
-
-  .pc-uniquement {
-    display: none;
   }
 }

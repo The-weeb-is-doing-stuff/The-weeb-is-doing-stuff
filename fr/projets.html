@@ -17,12 +17,12 @@
       <div class="theme">
         <button
           aria-label="Bouton Theme"
-          id="bouton-theme"
+          id="themeButton"
           type="button"
         ></button>
 
-        <button aria-label="Bouton Couleurs" type="button" onclick="couleurs()">
-          <!--Utiliser la bailse SVG me permet de modifier les couleurs dynamiquement en fonction du thème-->
+        <button aria-label="Bouton colors" type="button" onclick="colors()">
+          <!--Using the SVG tag allows me to dynamically change the colors based on the theme-->
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
             <title>palette</title>
             <path
@@ -34,12 +34,12 @@
 
         <button
           aria-label="Bouton Daltonien"
-          id="bouton-daltonien"
+          id="colorBlindButton"
           type="button"
-          onclick="daltonien()"
+          onclick="colorBlind()"
         ></button>
       </div>
-      <div class="bar-de-navigation">
+      <div class="navigation-bar">
         <ul>
           <li><a href="accueil.html">Accueil</a></li>
           <li><a class="active" href="projets.html">Projets</a></li>
@@ -56,12 +56,12 @@
     <h1>Projets GitHub</h1>
     <div class="horizontal1">
       <a
-        class="carte"
+        class="cards"
         href="https://github.com/The-weeb-is-doing-stuff/The-weeb-is-doing-stuff.github.io"
         target="_blank"
       >
         <img
-          src="../images/screenshots/Capture d’écran_16-12-2024_201251_127.0.0.1.jpeg"
+          src="../images/screenshots/screenshot_16-12-2024_201251_127.0.0.1.jpeg"
           alt="Capture d'écran du site web"
         />
         The-weeb-is-doing-stuff.github.io
@@ -72,7 +72,7 @@
       <div class="horizontal2">
         <a href="mailto:kitsuneisfoxinjapanese@gmail.com" aria-label="Email"
           ><div class="social-icon">
-            <!--Utiliser la bailse SVG me permet de modifier les couleurs dynamiquement en fonction du thème-->
+            <!--Using the SVG tag allows me to dynamically change the colors based on the theme-->
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
               <title>email</title>
               <path
@@ -88,7 +88,7 @@
           target="”_blank”"
         >
           <div class="social-icon">
-            <!--Utiliser la bailse SVG me permet de modifier les couleurs dynamiquement en fonction du thème-->
+            <!--Using the SVG tag allows me to dynamically change the colors based on the theme-->
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
               <title>github</title>
               <path
@@ -104,7 +104,7 @@
           target="”_blank”"
         >
           <div class="social-icon">
-            <!--Utiliser la bailse SVG me permet de modifier les couleurs dynamiquement en fonction du thème-->
+            <!--Using the SVG tag allows me to dynamically change the colors based on the theme-->
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
               <title>youtube</title>
               <path
@@ -126,14 +126,14 @@
       </div>
     </footer>
 
-    <!--les liens vers les fichiers de couleurs sont dans le balise "body" pace qu'on ne peut pas avoir de balise "span" dans le balise "head"-->
+    <!--The links to the color files are in the "body" tag because we cannot have a "span" tag in the "head" tag-->
 
-    <span id="span-couleurs">
-      <link rel="stylesheet" href="../css/couleurs/cyan_light.css" />
-      <link rel="stylesheet" href="../css/couleurs/cyan_dark.css" />
+    <span id="span-colors">
+      <link rel="stylesheet" href="../css/colors/cyan_light.css" />
+      <link rel="stylesheet" href="../css/colors/cyan_dark.css" />
     </span>
 
-    <!--le lien vers le fichier "script" est dans le balise "body" pour exécuter le ficher au chargement de la page-->
+    <!--The link to the "script" file is in the "body" tag to execute the file when the page loads-->
 
     <script type="text/javascript" src="../js/script.js"></script>
   </body>

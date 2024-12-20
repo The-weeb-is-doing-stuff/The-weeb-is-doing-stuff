@@ -1,4 +1,4 @@
-<!--Source des SVG : https://pictogrammers.com-->
+<!--Source of SVGs: https://pictogrammers.com-->
 
 <!DOCTYPE html>
 <html lang="fr" data-theme="light">
@@ -11,7 +11,7 @@
     <link rel="stylesheet" href="../css/style.css" />
     <link rel="icon" href="../images/Icon.ico" />
 
-    <!--Chargement de la police "Charm"-->
+    <!--Loading the "Charm" font-->
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -26,12 +26,12 @@
       <div class="theme">
         <button
           aria-label="Bouton Theme"
-          id="bouton-theme"
+          id="themeButton"
           type="button"
         ></button>
 
-        <button aria-label="Bouton Couleurs" type="button" onclick="couleurs()">
-          <!--Utiliser la bailse SVG me permet de modifier les couleurs dynamiquement en fonction du thème-->
+        <button aria-label="Bouton colors" type="button" onclick="colors()">
+          <!--Using the SVG tag allows me to dynamically change the colors based on the theme-->
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
             <title>palette</title>
             <path
@@ -43,12 +43,12 @@
 
         <button
           aria-label="Bouton Daltonien"
-          id="bouton-daltonien"
+          id="colorBlindButton"
           type="button"
-          onclick="daltonien()"
+          onclick="colorBlind()"
         ></button>
       </div>
-      <div class="bar-de-navigation">
+      <div class="navigation-bar">
         <ul>
           <li><a class="active" href="accueil.html">Accueil</a></li>
           <li><a href="projets.html">Projets</a></li>
@@ -62,7 +62,7 @@
       </div>
     </header>
 
-    <div class="boite1">
+    <div class="box1">
       <h1>The weeb is doing stuff</h1>
     </div>
 
@@ -70,7 +70,7 @@
       <div class="horizontal2">
         <a href="mailto:kitsuneisfoxinjapanese@gmail.com" aria-label="Email"
           ><div class="social-icon">
-            <!--Utiliser la bailse SVG me permet de modifier les couleurs dynamiquement en fonction du thème-->
+            <!--Using the SVG tag allows me to dynamically change the colors based on the theme-->
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
               <title>email</title>
               <path
@@ -86,7 +86,7 @@
           target="”_blank”"
         >
           <div class="social-icon">
-            <!--Utiliser la bailse SVG me permet de modifier les couleurs dynamiquement en fonction du thème-->
+            <!--Using the SVG tag allows me to dynamically change the colors based on the theme-->
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
               <title>github</title>
               <path
@@ -102,7 +102,7 @@
           target="”_blank”"
         >
           <div class="social-icon">
-            <!--Utiliser la bailse SVG me permet de modifier les couleurs dynamiquement en fonction du thème-->
+            <!--Using the SVG tag allows me to dynamically change the colors based on the theme-->
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
               <title>youtube</title>
               <path
@@ -124,14 +124,14 @@
       </div>
     </footer>
 
-    <!--les liens vers les fichiers de couleurs sont dans le balise "body" pace qu'on ne peut pas avoir de balise "span" dans le balise "head"-->
+    <!--The links to the color files are in the "body" tag because we cannot have a "span" tag in the "head" tag-->
 
-    <span id="span-couleurs">
-      <link rel="stylesheet" href="../css/couleurs/cyan_light.css" />
-      <link rel="stylesheet" href="../css/couleurs/cyan_dark.css" />
+    <span id="span-colors">
+      <link rel="stylesheet" href="../css/colors/cyan_light.css" />
+      <link rel="stylesheet" href="../css/colors/cyan_dark.css" />
     </span>
 
-    <!--le lien vers le fichier "script" est dans le balise "body" pour exécuter le ficher au chargement de la page-->
+    <!--The link to the "script" file is in the "body" tag to execute the file when the page loads-->
 
     <script type="text/javascript" src="../js/script.js"></script>
   </body>
