@@ -1,0 +1,2402 @@
+<!--Source des SVG : https://pictogrammers.com-->
+
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+  <head>
+    <title>Les lois générales du courant continue</title>
+    <meta charset="UTF-8" />
+    <meta name="robots" content="noindex" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <link rel="stylesheet" href="../css/style.css" />
+    <link rel="icon" href="../images/Icon.ico" />
+  </head>
+
+  <body>
+    <header>
+      <div class="theme">
+        <button
+          aria-label="Theme Button"
+          id="themeButton"
+          type="button"
+        ></button>
+
+        <button aria-label="Colors Button" type="button" onclick="colors()">
+          <!--Using the SVG tag allows me to dynamically change the colors based on the theme-->
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+            <title>palette</title>
+            <path
+              d="M17.5,12A1.5,1.5 0 0,1 16,10.5A1.5,1.5 0 0,1 17.5,9A1.5,1.5 0 0,1 19,10.5A1.5,1.5 0 0,1 17.5,12M14.5,8A1.5,1.5 0 0,1 13,6.5A1.5,1.5 0 0,1 14.5,5A1.5,1.5 0 0,1 16,6.5A1.5,1.5 0 0,1 14.5,8M9.5,8A1.5,1.5 0 0,1 8,6.5A1.5,1.5 0 0,1 9.5,5A1.5,1.5 0 0,1 11,6.5A1.5,1.5 0 0,1 9.5,8M6.5,12A1.5,1.5 0 0,1 5,10.5A1.5,1.5 0 0,1 6.5,9A1.5,1.5 0 0,1 8,10.5A1.5,1.5 0 0,1 6.5,12M12,3A9,9 0 0,0 3,12A9,9 0 0,0 12,21A1.5,1.5 0 0,0 13.5,19.5C13.5,19.11 13.35,18.76 13.11,18.5C12.88,18.23 12.73,17.88 12.73,17.5A1.5,1.5 0 0,1 14.23,16H16A5,5 0 0,0 21,11C21,6.58 16.97,3 12,3Z"
+              fill="var(--md-sys-color-on-primary-container)"
+            />
+          </svg>
+        </button>
+
+        <button
+          aria-label="Color Blind Button"
+          id="colorBlindButton"
+          type="button"
+          onclick="colorBlind()"
+        ></button>
+      </div>
+      <div class="navigation-bar">
+        <ul>
+          <li><a href="../fr/accueil.html">Accueil</a></li>
+          <li><a class="active" href="../fr/cours.html">Cours</a></li>
+        </ul>
+      </div>
+      <div class="lang">
+        <ul>
+          <li><a class="active" onclick="fr()">FR</a></li>
+          <li><a onclick="en()">EN</a></li>
+        </ul>
+      </div>
+    </header>
+
+    <div class="linear-gradient"></div>
+
+    <div class="box2">
+      <h1>Les lois générales du courant continue</h1>
+    </div>
+
+    <div class="box2">
+      <h2>I - Introduction / Définitions</h2>
+    </div>
+
+    <div class="box2">
+      <h3>1.1 Qu’est ce qu’un courant électrique ?</h3>
+      <p>
+        Un courant électrique est un déplacement d’électrons d’un point
+        <b>A</b> vers un point <b>B</b>. Pour cela, il faut qu’entre <b>A</b> et
+        <b>B</b>, il y ait un conducteur électrique (un fil de cuivre). On le
+        nome grand <b>I</b> comme <b>Intensité</b> du courant.
+      </p>
+
+      <div class="split">
+        <div class="left">
+          <svg
+            version="1.1"
+            width="180"
+            height="200"
+            viewBox="0 0 180 200"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <line
+              x1="60"
+              y1="160"
+              x2="55"
+              y2="160"
+              style="
+                stroke: var(--md-sys-color-on-background);
+                stroke-linecap: square;
+                stroke-width: 2;
+              "
+            />
+            <path
+              d="M 55,160 L 55,157 L 50,160 L 55,163 L 55,160"
+              style="
+                fill-opacity: 1;
+                fill: var(--md-sys-color-on-background);
+                stroke: var(--md-sys-color-on-background);
+                stroke-linecap: square;
+                stroke-width: 2;
+              "
+            />
+            <text
+              x="55"
+              y="148"
+              style="font-size: 11px; text-anchor: middle"
+              dominant-baseline="middle"
+              transform="rotate(0, 55, 148)"
+            >
+              I
+            </text>
+            <line
+              x1="50"
+              y1="60"
+              x2="55"
+              y2="60"
+              style="
+                stroke: var(--md-sys-color-on-background);
+                stroke-linecap: square;
+                stroke-width: 2;
+              "
+            />
+            <path
+              d="M 55,60 L 55,57 L 60,60 L 55,63 L 55,60"
+              style="
+                fill-opacity: 1;
+                fill: var(--md-sys-color-on-background);
+                stroke: var(--md-sys-color-on-background);
+                stroke-linecap: square;
+                stroke-width: 2;
+              "
+            />
+            <text
+              x="55"
+              y="48"
+              style="font-size: 11px; text-anchor: middle"
+              dominant-baseline="middle"
+              transform="rotate(0, 55, 48)"
+            >
+              I
+            </text>
+            <line
+              x1="140"
+              y1="100"
+              x2="140"
+              y2="105"
+              style="
+                stroke: var(--md-sys-color-on-background);
+                stroke-linecap: square;
+                stroke-width: 2;
+              "
+            />
+            <path
+              d="M 140,105 L 143,105 L 140,110 L 137,105 L 140,105"
+              style="
+                fill-opacity: 1;
+                fill: var(--md-sys-color-on-background);
+                stroke: var(--md-sys-color-on-background);
+                stroke-linecap: square;
+                stroke-width: 2;
+              "
+            />
+            <text
+              x="132"
+              y="105"
+              style="font-size: 11px; text-anchor: end"
+              dominant-baseline="middle"
+              transform="rotate(0, 132, 105)"
+            >
+              I
+            </text>
+            <line
+              x1="140"
+              y1="60"
+              x2="140"
+              y2="160"
+              style="
+                stroke: var(--md-sys-color-on-background);
+                stroke-linecap: square;
+                stroke-width: 2;
+              "
+            />
+            <line
+              x1="40"
+              y1="160"
+              x2="70"
+              y2="160"
+              style="
+                stroke: var(--md-sys-color-on-background);
+                stroke-linecap: square;
+                stroke-width: 2;
+              "
+            />
+            <line
+              x1="110"
+              y1="160"
+              x2="140"
+              y2="160"
+              style="
+                stroke: var(--md-sys-color-on-background);
+                stroke-linecap: square;
+                stroke-width: 2;
+              "
+            />
+            <rect
+              x="70"
+              y="152"
+              width="40"
+              height="16"
+              style="
+                fill-opacity: 0;
+                fill: var(--md-sys-color-on-background);
+                stroke: var(--md-sys-color-on-background);
+                stroke-width: 2;
+              "
+            />
+            <text
+              x="90"
+              y="146"
+              style="font-size: 11px; text-anchor: middle"
+              dominant-baseline="baseline"
+              transform="rotate(0, 90, 146)"
+            >
+              R2
+            </text>
+            <line
+              x1="40"
+              y1="60"
+              x2="70"
+              y2="60"
+              style="
+                stroke: var(--md-sys-color-on-background);
+                stroke-linecap: square;
+                stroke-width: 2;
+              "
+            />
+            <line
+              x1="110"
+              y1="60"
+              x2="140"
+              y2="60"
+              style="
+                stroke: var(--md-sys-color-on-background);
+                stroke-linecap: square;
+                stroke-width: 2;
+              "
+            />
+            <rect
+              x="70"
+              y="52"
+              width="40"
+              height="16"
+              style="
+                fill-opacity: 0;
+                fill: var(--md-sys-color-on-background);
+                stroke: var(--md-sys-color-on-background);
+                stroke-width: 2;
+              "
+            />
+            <text
+              x="90"
+              y="46"
+              style="font-size: 11px; text-anchor: middle"
+              dominant-baseline="baseline"
+              transform="rotate(0, 90, 46)"
+            >
+              R1
+            </text>
+            <line
+              x1="40"
+              y1="160"
+              x2="40"
+              y2="123"
+              style="
+                stroke: var(--md-sys-color-on-background);
+                stroke-linecap: square;
+                stroke-width: 2;
+              "
+            />
+            <line
+              x1="40"
+              y1="97"
+              x2="40"
+              y2="60"
+              style="
+                stroke: var(--md-sys-color-on-background);
+                stroke-linecap: square;
+                stroke-width: 2;
+              "
+            />
+            <text
+              x="40"
+              y="110"
+              style="font-size: 12px; text-anchor: middle"
+              dominant-baseline="middle"
+              transform="rotate(0, 40, 110)"
+            >
+              G
+            </text>
+            <ellipse
+              cx="40"
+              cy="110"
+              rx="12"
+              ry="12"
+              style="
+                fill-opacity: 0;
+                fill: var(--md-sys-color-on-background);
+                stroke: var(--md-sys-color-on-background);
+                stroke-width: 2;
+              "
+            />
+          </svg>
+        </div>
+
+        <div class="right">
+          <p>
+            <b><u>Remarque :</u></b> le courant qui entre dans un dipôle est
+            toujours de même que celui qui ressort.
+          </p>
+        </div>
+      </div>
+
+      <div class="split">
+        <div class="left">
+          <svg
+            version="1.1"
+            width="280"
+            height="200"
+            viewBox="0 0 280 200"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <text
+              x="150"
+              y="170"
+              style="font-size: 11px; text-anchor: middle"
+              dominant-baseline="middle"
+              transform="rotate(0, 150, 170)"
+            >
+              COM
+            </text>
+            <text
+              x="210"
+              y="170"
+              style="font-size: 11px; text-anchor: middle"
+              dominant-baseline="middle"
+              transform="rotate(0, 210, 170)"
+            >
+              +
+            </text>
+            <line
+              x1="140"
+              y1="160"
+              x2="177"
+              y2="160"
+              style="
+                stroke: var(--md-sys-color-on-background);
+                stroke-linecap: square;
+                stroke-width: 2;
+              "
+            />
+            <line
+              x1="203"
+              y1="160"
+              x2="240"
+              y2="160"
+              style="
+                stroke: var(--md-sys-color-on-background);
+                stroke-linecap: square;
+                stroke-width: 2;
+              "
+            />
+            <ellipse
+              cx="190"
+              cy="160"
+              rx="12"
+              ry="12"
+              style="
+                fill-opacity: 0;
+                fill: var(--md-sys-color-on-background);
+                stroke: var(--md-sys-color-on-background);
+                stroke-width: 2;
+              "
+            />
+            <text
+              x="190"
+              y="160"
+              style="font-size: 12px; text-anchor: middle"
+              dominant-baseline="middle"
+              transform="rotate(0, 190, 160)"
+            >
+              A
+            </text>
+            <line
+              x1="140"
+              y1="70"
+              x2="140"
+              y2="75"
+              style="
+                stroke: var(--md-sys-color-on-background);
+                stroke-linecap: square;
+                stroke-width: 2;
+              "
+            />
+            <path
+              d="M 140,75 L 143,75 L 140,80 L 137,75 L 140,75"
+              style="
+                fill-opacity: 1;
+                fill: var(--md-sys-color-on-background);
+                stroke: var(--md-sys-color-on-background);
+                stroke-linecap: square;
+                stroke-width: 2;
+              "
+            />
+            <text
+              x="132"
+              y="75"
+              style="font-size: 11px; text-anchor: end"
+              dominant-baseline="middle"
+              transform="rotate(0, 132, 75)"
+            >
+              I1
+            </text>
+            <line
+              x1="140"
+              y1="60"
+              x2="240"
+              y2="60"
+              style="
+                stroke: var(--md-sys-color-on-background);
+                stroke-linecap: square;
+                stroke-width: 2;
+              "
+            />
+            <line
+              x1="240"
+              y1="60"
+              x2="240"
+              y2="90"
+              style="
+                stroke: var(--md-sys-color-on-background);
+                stroke-linecap: square;
+                stroke-width: 2;
+              "
+            />
+            <line
+              x1="240"
+              y1="130"
+              x2="240"
+              y2="160"
+              style="
+                stroke: var(--md-sys-color-on-background);
+                stroke-linecap: square;
+                stroke-width: 2;
+              "
+            />
+            <rect
+              x="232"
+              y="90"
+              width="16"
+              height="40"
+              style="
+                fill-opacity: 0;
+                fill: var(--md-sys-color-on-background);
+                stroke: var(--md-sys-color-on-background);
+                stroke-width: 2;
+              "
+            />
+            <text
+              x="226"
+              y="110"
+              style="font-size: 11px; text-anchor: end"
+              dominant-baseline="middle"
+              transform="rotate(0, 226, 110)"
+            >
+              R3
+            </text>
+            <line
+              x1="100"
+              y1="160"
+              x2="85"
+              y2="160"
+              style="
+                stroke: var(--md-sys-color-on-background);
+                stroke-linecap: square;
+                stroke-width: 2;
+              "
+            />
+            <path
+              d="M 85,160 L 85,157 L 80,160 L 85,163 L 85,160"
+              style="
+                fill-opacity: 1;
+                fill: var(--md-sys-color-on-background);
+                stroke: var(--md-sys-color-on-background);
+                stroke-linecap: square;
+                stroke-width: 2;
+              "
+            />
+            <text
+              x="90"
+              y="148"
+              style="font-size: 11px; text-anchor: middle"
+              dominant-baseline="middle"
+              transform="rotate(0, 90, 148)"
+            >
+              I
+            </text>
+            <line
+              x1="40"
+              y1="60"
+              x2="55"
+              y2="60"
+              style="
+                stroke: var(--md-sys-color-on-background);
+                stroke-linecap: square;
+                stroke-width: 2;
+              "
+            />
+            <path
+              d="M 55,60 L 55,57 L 60,60 L 55,63 L 55,60"
+              style="
+                fill-opacity: 1;
+                fill: var(--md-sys-color-on-background);
+                stroke: var(--md-sys-color-on-background);
+                stroke-linecap: square;
+                stroke-width: 2;
+              "
+            />
+            <text
+              x="50"
+              y="48"
+              style="font-size: 11px; text-anchor: middle"
+              dominant-baseline="middle"
+              transform="rotate(0, 50, 48)"
+            >
+              I
+            </text>
+            <line
+              x1="180"
+              y1="60"
+              x2="195"
+              y2="60"
+              style="
+                stroke: var(--md-sys-color-on-background);
+                stroke-linecap: square;
+                stroke-width: 2;
+              "
+            />
+            <path
+              d="M 195,60 L 195,57 L 200,60 L 195,63 L 195,60"
+              style="
+                fill-opacity: 1;
+                fill: var(--md-sys-color-on-background);
+                stroke: var(--md-sys-color-on-background);
+                stroke-linecap: square;
+                stroke-width: 2;
+              "
+            />
+            <text
+              x="190"
+              y="48"
+              style="font-size: 11px; text-anchor: middle"
+              dominant-baseline="middle"
+              transform="rotate(0, 190, 48)"
+            >
+              I2
+            </text>
+            <line
+              x1="40"
+              y1="160"
+              x2="140"
+              y2="160"
+              style="
+                stroke: var(--md-sys-color-on-background);
+                stroke-linecap: square;
+                stroke-width: 2;
+              "
+            />
+            <line
+              x1="140"
+              y1="60"
+              x2="140"
+              y2="90"
+              style="
+                stroke: var(--md-sys-color-on-background);
+                stroke-linecap: square;
+                stroke-width: 2;
+              "
+            />
+            <line
+              x1="140"
+              y1="130"
+              x2="140"
+              y2="160"
+              style="
+                stroke: var(--md-sys-color-on-background);
+                stroke-linecap: square;
+                stroke-width: 2;
+              "
+            />
+            <rect
+              x="132"
+              y="90"
+              width="16"
+              height="40"
+              style="
+                fill-opacity: 0;
+                fill: var(--md-sys-color-on-background);
+                stroke: var(--md-sys-color-on-background);
+                stroke-width: 2;
+              "
+            />
+            <text
+              x="126"
+              y="110"
+              style="font-size: 11px; text-anchor: end"
+              dominant-baseline="middle"
+              transform="rotate(0, 126, 110)"
+            >
+              R2
+            </text>
+            <line
+              x1="40"
+              y1="60"
+              x2="70"
+              y2="60"
+              style="
+                stroke: var(--md-sys-color-on-background);
+                stroke-linecap: square;
+                stroke-width: 2;
+              "
+            />
+            <line
+              x1="110"
+              y1="60"
+              x2="140"
+              y2="60"
+              style="
+                stroke: var(--md-sys-color-on-background);
+                stroke-linecap: square;
+                stroke-width: 2;
+              "
+            />
+            <rect
+              x="70"
+              y="52"
+              width="40"
+              height="16"
+              style="
+                fill-opacity: 0;
+                fill: var(--md-sys-color-on-background);
+                stroke: var(--md-sys-color-on-background);
+                stroke-width: 2;
+              "
+            />
+            <text
+              x="90"
+              y="46"
+              style="font-size: 11px; text-anchor: middle"
+              dominant-baseline="baseline"
+              transform="rotate(0, 90, 46)"
+            >
+              R1
+            </text>
+            <line
+              x1="40"
+              y1="160"
+              x2="40"
+              y2="123"
+              style="
+                stroke: var(--md-sys-color-on-background);
+                stroke-linecap: square;
+                stroke-width: 2;
+              "
+            />
+            <line
+              x1="40"
+              y1="97"
+              x2="40"
+              y2="60"
+              style="
+                stroke: var(--md-sys-color-on-background);
+                stroke-linecap: square;
+                stroke-width: 2;
+              "
+            />
+            <text
+              x="40"
+              y="110"
+              style="font-size: 12px; text-anchor: middle"
+              dominant-baseline="middle"
+              transform="rotate(0, 40, 110)"
+            >
+              G
+            </text>
+            <ellipse
+              cx="40"
+              cy="110"
+              rx="12"
+              ry="12"
+              style="
+                fill-opacity: 0;
+                fill: var(--md-sys-color-on-background);
+                stroke: var(--md-sys-color-on-background);
+                stroke-width: 2;
+              "
+            />
+            <ellipse
+              cx="140"
+              cy="160"
+              rx="2"
+              ry="2"
+              style="
+                fill-opacity: 1;
+                fill: var(--md-sys-color-on-background);
+                stroke: var(--md-sys-color-on-background);
+                stroke-width: 2;
+              "
+            />
+            <ellipse
+              cx="140"
+              cy="60"
+              rx="2"
+              ry="2"
+              style="
+                fill-opacity: 1;
+                fill: var(--md-sys-color-on-background);
+                stroke: var(--md-sys-color-on-background);
+                stroke-width: 2;
+              "
+            />
+          </svg>
+        </div>
+
+        <div class="right">
+          <p>
+            On mesure le courant électrique avec un Ampèremètre que l’on place
+            en série dans le circuit de sorte que le courant mesuré rentre par
+            la borne
+            <b>+</b> et ressort par la borne <b>COM</b>.
+          </p>
+        </div>
+      </div>
+
+      <p>Le courant <b>I</b> se mesure en <b>Ampère [A]</b>.</p>
+
+      <p>
+        <b><u>Rappel :</u></b>
+      </p>
+
+      <ul>
+        <li>
+          milliampère :
+          <math display="inline">
+            <mi>1</mi>
+            <mi>m</mi>
+            <mi>A</mi>
+            <mo>=</mo>
+            <msup>
+              <mi>10</mi>
+              <mn>-3</mn>
+            </msup>
+            <mi>A</mi>
+          </math>
+        </li>
+        <li>
+          microampère :
+          <math display="inline">
+            <mi>1</mi>
+            <mi>µ</mi>
+            <mi>A</mi>
+            <mo>=</mo>
+            <msup>
+              <mi>10</mi>
+              <mn>-6</mn>
+            </msup>
+            <mi>A</mi>
+          </math>
+        </li>
+        <li>
+          nanoampère :
+          <math display="inline">
+            <mi>1</mi>
+            <mi>n</mi>
+            <mi>A</mi>
+            <mo>=</mo>
+            <msup>
+              <mi>10</mi>
+              <mn>-9</mn>
+            </msup>
+            <mi>A</mi>
+          </math>
+        </li>
+        <li>
+          picoampère :
+          <math display="inline">
+            <mi>1</mi>
+            <mi>p</mi>
+            <mi>A</mi>
+            <mo>=</mo>
+            <msup>
+              <mi>10</mi>
+              <mn>-12</mn>
+            </msup>
+            <mi>A</mi>
+          </math>
+        </li>
+      </ul>
+    </div>
+
+    <div class="box2">
+      <h3>1.2 Qu’est ce que la tension électrique?</h3>
+      <p>
+        Une tension électrique <b>U</b> représente une réserve d’énergie qui
+        permet le débit du courant. Elle est aussi appelé différence de
+        potentiel :
+        <math display="inline">
+          <mn>U</mn>
+          <mo>=</mo>
+          <msub>
+            <mi>V</mi>
+            <mn>1</mn>
+          </msub>
+          <mo>-</mo>
+          <msub>
+            <mi>V</mi>
+            <mn>2</mn>
+          </msub>
+        </math>
+        .
+      </p>
+      <p>On la représente par une flèche à coté du circuit électrique :</p>
+      <div class="split">
+        <div class="left">
+          <svg
+            version="1.1"
+            width="320"
+            height="220"
+            viewBox="0 0 320 220"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <text
+              x="170"
+              y="190"
+              style="font-size: 11px; text-anchor: start"
+              dominant-baseline="middle"
+              transform="rotate(0, 170, 190)"
+            >
+              D
+            </text>
+            <text
+              x="280"
+              y="70"
+              style="font-size: 11px; text-anchor: start"
+              dominant-baseline="middle"
+              transform="rotate(0, 280, 70)"
+            >
+              C
+            </text>
+            <text
+              x="180"
+              y="70"
+              style="font-size: 11px; text-anchor: start"
+              dominant-baseline="middle"
+              transform="rotate(0, 180, 70)"
+            >
+              B
+            </text>
+            <text
+              x="70"
+              y="70"
+              style="font-size: 11px; text-anchor: start"
+              dominant-baseline="middle"
+              transform="rotate(0, 70, 70)"
+            >
+              A
+            </text>
+            <line
+              x1="60"
+              y1="140"
+              x2="60"
+              y2="125"
+              style="
+                stroke: var(--md-sys-color-on-background);
+                stroke-linecap: square;
+                stroke-width: 2;
+              "
+            />
+            <path
+              d="M 60,125 L 63,125 L 60,120 L 57,125 L 60,125"
+              style="
+                fill-opacity: 1;
+                fill: var(--md-sys-color-on-background);
+                stroke: var(--md-sys-color-on-background);
+                stroke-linecap: square;
+                stroke-width: 2;
+              "
+            />
+            <text
+              x="52"
+              y="130"
+              style="font-size: 11px; text-anchor: end"
+              dominant-baseline="middle"
+              transform="rotate(0, 52, 130)"
+            >
+              UAD
+            </text>
+            <line
+              x1="250"
+              y1="150"
+              x2="250"
+              y2="115"
+              style="
+                stroke: var(--md-sys-color-on-background);
+                stroke-linecap: square;
+                stroke-width: 2;
+              "
+            />
+            <path
+              d="M 250,115 L 253,115 L 250,110 L 247,115 L 250,115"
+              style="
+                fill-opacity: 1;
+                fill: var(--md-sys-color-on-background);
+                stroke: var(--md-sys-color-on-background);
+                stroke-linecap: square;
+                stroke-width: 2;
+              "
+            />
+            <text
+              x="242"
+              y="130"
+              style="font-size: 11px; text-anchor: end"
+              dominant-baseline="middle"
+              transform="rotate(0, 242, 130)"
+            >
+              UCD
+            </text>
+            <line
+              x1="150"
+              y1="150"
+              x2="150"
+              y2="115"
+              style="
+                stroke: var(--md-sys-color-on-background);
+                stroke-linecap: square;
+                stroke-width: 2;
+              "
+            />
+            <path
+              d="M 150,115 L 153,115 L 150,110 L 147,115 L 150,115"
+              style="
+                fill-opacity: 1;
+                fill: var(--md-sys-color-on-background);
+                stroke: var(--md-sys-color-on-background);
+                stroke-linecap: square;
+                stroke-width: 2;
+              "
+            />
+            <text
+              x="142"
+              y="130"
+              style="font-size: 11px; text-anchor: end"
+              dominant-baseline="middle"
+              transform="rotate(0, 142, 130)"
+            >
+              UBD
+            </text>
+            <line
+              x1="150"
+              y1="50"
+              x2="115"
+              y2="50"
+              style="
+                stroke: var(--md-sys-color-on-background);
+                stroke-linecap: square;
+                stroke-width: 2;
+              "
+            />
+            <path
+              d="M 115,50 L 115,47 L 110,50 L 115,53 L 115,50"
+              style="
+                fill-opacity: 1;
+                fill: var(--md-sys-color-on-background);
+                stroke: var(--md-sys-color-on-background);
+                stroke-linecap: square;
+                stroke-width: 2;
+              "
+            />
+            <text
+              x="130"
+              y="38"
+              style="font-size: 11px; text-anchor: middle"
+              dominant-baseline="middle"
+              transform="rotate(0, 130, 38)"
+            >
+              UAB
+            </text>
+            <line
+              x1="180"
+              y1="90"
+              x2="180"
+              y2="95"
+              style="
+                stroke: var(--md-sys-color-on-background);
+                stroke-linecap: square;
+                stroke-width: 2;
+              "
+            />
+            <path
+              d="M 180,95 L 183,95 L 180,100 L 177,95 L 180,95"
+              style="
+                fill-opacity: 1;
+                fill: var(--md-sys-color-on-background);
+                stroke: var(--md-sys-color-on-background);
+                stroke-linecap: square;
+                stroke-width: 2;
+              "
+            />
+            <text
+              x="172"
+              y="95"
+              style="font-size: 11px; text-anchor: end"
+              dominant-baseline="middle"
+              transform="rotate(0, 172, 95)"
+            >
+              I1
+            </text>
+            <line
+              x1="180"
+              y1="80"
+              x2="280"
+              y2="80"
+              style="
+                stroke: var(--md-sys-color-on-background);
+                stroke-linecap: square;
+                stroke-width: 2;
+              "
+            />
+            <line
+              x1="280"
+              y1="80"
+              x2="280"
+              y2="110"
+              style="
+                stroke: var(--md-sys-color-on-background);
+                stroke-linecap: square;
+                stroke-width: 2;
+              "
+            />
+            <line
+              x1="280"
+              y1="150"
+              x2="280"
+              y2="180"
+              style="
+                stroke: var(--md-sys-color-on-background);
+                stroke-linecap: square;
+                stroke-width: 2;
+              "
+            />
+            <rect
+              x="272"
+              y="110"
+              width="16"
+              height="40"
+              style="
+                fill-opacity: 0;
+                fill: var(--md-sys-color-on-background);
+                stroke: var(--md-sys-color-on-background);
+                stroke-width: 2;
+              "
+            />
+            <text
+              x="266"
+              y="130"
+              style="font-size: 11px; text-anchor: end"
+              dominant-baseline="middle"
+              transform="rotate(0, 266, 130)"
+            >
+              R3
+            </text>
+            <line
+              x1="140"
+              y1="180"
+              x2="125"
+              y2="180"
+              style="
+                stroke: var(--md-sys-color-on-background);
+                stroke-linecap: square;
+                stroke-width: 2;
+              "
+            />
+            <path
+              d="M 125,180 L 125,177 L 120,180 L 125,183 L 125,180"
+              style="
+                fill-opacity: 1;
+                fill: var(--md-sys-color-on-background);
+                stroke: var(--md-sys-color-on-background);
+                stroke-linecap: square;
+                stroke-width: 2;
+              "
+            />
+            <text
+              x="130"
+              y="168"
+              style="font-size: 11px; text-anchor: middle"
+              dominant-baseline="middle"
+              transform="rotate(0, 130, 168)"
+            >
+              I
+            </text>
+            <line
+              x1="80"
+              y1="80"
+              x2="95"
+              y2="80"
+              style="
+                stroke: var(--md-sys-color-on-background);
+                stroke-linecap: square;
+                stroke-width: 2;
+              "
+            />
+            <path
+              d="M 95,80 L 95,77 L 100,80 L 95,83 L 95,80"
+              style="
+                fill-opacity: 1;
+                fill: var(--md-sys-color-on-background);
+                stroke: var(--md-sys-color-on-background);
+                stroke-linecap: square;
+                stroke-width: 2;
+              "
+            />
+            <text
+              x="90"
+              y="68"
+              style="font-size: 11px; text-anchor: middle"
+              dominant-baseline="middle"
+              transform="rotate(0, 90, 68)"
+            >
+              I
+            </text>
+            <line
+              x1="220"
+              y1="80"
+              x2="235"
+              y2="80"
+              style="
+                stroke: var(--md-sys-color-on-background);
+                stroke-linecap: square;
+                stroke-width: 2;
+              "
+            />
+            <path
+              d="M 235,80 L 235,77 L 240,80 L 235,83 L 235,80"
+              style="
+                fill-opacity: 1;
+                fill: var(--md-sys-color-on-background);
+                stroke: var(--md-sys-color-on-background);
+                stroke-linecap: square;
+                stroke-width: 2;
+              "
+            />
+            <text
+              x="230"
+              y="68"
+              style="font-size: 11px; text-anchor: middle"
+              dominant-baseline="middle"
+              transform="rotate(0, 230, 68)"
+            >
+              I2
+            </text>
+            <line
+              x1="80"
+              y1="180"
+              x2="280"
+              y2="180"
+              style="
+                stroke: var(--md-sys-color-on-background);
+                stroke-linecap: square;
+                stroke-width: 2;
+              "
+            />
+            <line
+              x1="180"
+              y1="80"
+              x2="180"
+              y2="110"
+              style="
+                stroke: var(--md-sys-color-on-background);
+                stroke-linecap: square;
+                stroke-width: 2;
+              "
+            />
+            <line
+              x1="180"
+              y1="150"
+              x2="180"
+              y2="180"
+              style="
+                stroke: var(--md-sys-color-on-background);
+                stroke-linecap: square;
+                stroke-width: 2;
+              "
+            />
+            <rect
+              x="172"
+              y="110"
+              width="16"
+              height="40"
+              style="
+                fill-opacity: 0;
+                fill: var(--md-sys-color-on-background);
+                stroke: var(--md-sys-color-on-background);
+                stroke-width: 2;
+              "
+            />
+            <text
+              x="166"
+              y="130"
+              style="font-size: 11px; text-anchor: end"
+              dominant-baseline="middle"
+              transform="rotate(0, 166, 130)"
+            >
+              R2
+            </text>
+            <line
+              x1="80"
+              y1="80"
+              x2="110"
+              y2="80"
+              style="
+                stroke: var(--md-sys-color-on-background);
+                stroke-linecap: square;
+                stroke-width: 2;
+              "
+            />
+            <line
+              x1="150"
+              y1="80"
+              x2="180"
+              y2="80"
+              style="
+                stroke: var(--md-sys-color-on-background);
+                stroke-linecap: square;
+                stroke-width: 2;
+              "
+            />
+            <rect
+              x="110"
+              y="72"
+              width="40"
+              height="16"
+              style="
+                fill-opacity: 0;
+                fill: var(--md-sys-color-on-background);
+                stroke: var(--md-sys-color-on-background);
+                stroke-width: 2;
+              "
+            />
+            <text
+              x="130"
+              y="66"
+              style="font-size: 11px; text-anchor: middle"
+              dominant-baseline="baseline"
+              transform="rotate(0, 130, 66)"
+            >
+              R1
+            </text>
+            <line
+              x1="80"
+              y1="180"
+              x2="80"
+              y2="143"
+              style="
+                stroke: var(--md-sys-color-on-background);
+                stroke-linecap: square;
+                stroke-width: 2;
+              "
+            />
+            <line
+              x1="80"
+              y1="117"
+              x2="80"
+              y2="80"
+              style="
+                stroke: var(--md-sys-color-on-background);
+                stroke-linecap: square;
+                stroke-width: 2;
+              "
+            />
+            <text
+              x="80"
+              y="130"
+              style="font-size: 12px; text-anchor: middle"
+              dominant-baseline="middle"
+              transform="rotate(0, 80, 130)"
+            >
+              G
+            </text>
+            <ellipse
+              cx="80"
+              cy="130"
+              rx="12"
+              ry="12"
+              style="
+                fill-opacity: 0;
+                fill: var(--md-sys-color-on-background);
+                stroke: var(--md-sys-color-on-background);
+                stroke-width: 2;
+              "
+            />
+            <ellipse
+              cx="180"
+              cy="80"
+              rx="2"
+              ry="2"
+              style="
+                fill-opacity: 1;
+                fill: var(--md-sys-color-on-background);
+                stroke: var(--md-sys-color-on-background);
+                stroke-width: 2;
+              "
+            />
+            <ellipse
+              cx="180"
+              cy="180"
+              rx="2"
+              ry="2"
+              style="
+                fill-opacity: 1;
+                fill: var(--md-sys-color-on-background);
+                stroke: var(--md-sys-color-on-background);
+                stroke-width: 2;
+              "
+            />
+          </svg>
+        </div>
+
+        <div class="right">
+          <math display="inline">
+            <msub>
+              <mi>U</mi>
+              <mn>A</mn>
+              <mn>B</mn>
+            </msub>
+            <mo>=</mo>
+            <msub>
+              <mi>V</mi>
+              <mn>A</mn>
+            </msub>
+            <mo>-</mo>
+            <msub>
+              <mi>V</mi>
+              <mn>B</mn>
+            </msub>
+          </math>
+
+          <p></p>
+
+          <math display="inline">
+            <msub>
+              <mi>U</mi>
+              <mn>B</mn>
+              <mn>D</mn>
+            </msub>
+            <mo>=</mo>
+            <msub>
+              <mi>V</mi>
+              <mn>B</mn>
+            </msub>
+            <mo>-</mo>
+            <msub>
+              <mi>V</mi>
+              <mn>D</mn>
+            </msub>
+          </math>
+
+          <p></p>
+
+          <math display="inline">
+            <msub>
+              <mi>U</mi>
+              <mn>C</mn>
+              <mn>D</mn>
+            </msub>
+            <mo>=</mo>
+            <msub>
+              <mi>V</mi>
+              <mn>C</mn>
+            </msub>
+            <mo>-</mo>
+            <msub>
+              <mi>V</mi>
+              <mn>D</mn>
+            </msub>
+          </math>
+
+          <p></p>
+
+          <math display="inline">
+            <msub>
+              <mi>U</mi>
+              <mn>A</mn>
+              <mn>D</mn>
+            </msub>
+            <mo>=</mo>
+            <msub>
+              <mi>V</mi>
+              <mn>A</mn>
+            </msub>
+            <mo>-</mo>
+            <msub>
+              <mi>V</mi>
+              <mn>D</mn>
+            </msub>
+          </math>
+        </div>
+      </div>
+
+      <div class="split">
+        <div class="left">
+          <svg
+            version="1.1"
+            width="450"
+            height="220"
+            viewBox="0 0 450 220"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <text
+              x="390"
+              y="150"
+              style="font-size: 11px; text-anchor: start"
+              dominant-baseline="middle"
+              transform="rotate(0, 390, 150)"
+            >
+              COM
+            </text>
+            <text
+              x="390"
+              y="110"
+              style="font-size: 11px; text-anchor: start"
+              dominant-baseline="middle"
+              transform="rotate(0, 390, 110)"
+            >
+              +
+            </text>
+            <line
+              x1="380"
+              y1="80"
+              x2="380"
+              y2="117"
+              style="
+                stroke: var(--md-sys-color-on-background);
+                stroke-linecap: square;
+                stroke-width: 2;
+              "
+            />
+            <line
+              x1="380"
+              y1="143"
+              x2="380"
+              y2="180"
+              style="
+                stroke: var(--md-sys-color-on-background);
+                stroke-linecap: square;
+                stroke-width: 2;
+              "
+            />
+            <ellipse
+              cx="380"
+              cy="130"
+              rx="12"
+              ry="12"
+              style="
+                fill-opacity: 0;
+                fill: var(--md-sys-color-on-background);
+                stroke: var(--md-sys-color-on-background);
+                stroke-width: 2;
+              "
+            />
+            <text
+              x="380"
+              y="130"
+              style="font-size: 12px; text-anchor: middle"
+              dominant-baseline="middle"
+              transform="rotate(0, 380, 130)"
+            >
+              V
+            </text>
+            <text
+              x="170"
+              y="190"
+              style="font-size: 11px; text-anchor: start"
+              dominant-baseline="middle"
+              transform="rotate(0, 170, 190)"
+            >
+              D
+            </text>
+            <text
+              x="280"
+              y="70"
+              style="font-size: 11px; text-anchor: start"
+              dominant-baseline="middle"
+              transform="rotate(0, 280, 70)"
+            >
+              C
+            </text>
+            <text
+              x="180"
+              y="70"
+              style="font-size: 11px; text-anchor: start"
+              dominant-baseline="middle"
+              transform="rotate(0, 180, 70)"
+            >
+              B
+            </text>
+            <text
+              x="70"
+              y="70"
+              style="font-size: 11px; text-anchor: start"
+              dominant-baseline="middle"
+              transform="rotate(0, 70, 70)"
+            >
+              A
+            </text>
+            <line
+              x1="60"
+              y1="140"
+              x2="60"
+              y2="125"
+              style="
+                stroke: var(--md-sys-color-on-background);
+                stroke-linecap: square;
+                stroke-width: 2;
+              "
+            />
+            <path
+              d="M 60,125 L 63,125 L 60,120 L 57,125 L 60,125"
+              style="
+                fill-opacity: 1;
+                fill: var(--md-sys-color-on-background);
+                stroke: var(--md-sys-color-on-background);
+                stroke-linecap: square;
+                stroke-width: 2;
+              "
+            />
+            <text
+              x="52"
+              y="130"
+              style="font-size: 11px; text-anchor: end"
+              dominant-baseline="middle"
+              transform="rotate(0, 52, 130)"
+            >
+              UAD
+            </text>
+            <line
+              x1="250"
+              y1="150"
+              x2="250"
+              y2="115"
+              style="
+                stroke: var(--md-sys-color-on-background);
+                stroke-linecap: square;
+                stroke-width: 2;
+              "
+            />
+            <path
+              d="M 250,115 L 253,115 L 250,110 L 247,115 L 250,115"
+              style="
+                fill-opacity: 1;
+                fill: var(--md-sys-color-on-background);
+                stroke: var(--md-sys-color-on-background);
+                stroke-linecap: square;
+                stroke-width: 2;
+              "
+            />
+            <text
+              x="242"
+              y="130"
+              style="font-size: 11px; text-anchor: end"
+              dominant-baseline="middle"
+              transform="rotate(0, 242, 130)"
+            >
+              UCD
+            </text>
+            <line
+              x1="150"
+              y1="150"
+              x2="150"
+              y2="115"
+              style="
+                stroke: var(--md-sys-color-on-background);
+                stroke-linecap: square;
+                stroke-width: 2;
+              "
+            />
+            <path
+              d="M 150,115 L 153,115 L 150,110 L 147,115 L 150,115"
+              style="
+                fill-opacity: 1;
+                fill: var(--md-sys-color-on-background);
+                stroke: var(--md-sys-color-on-background);
+                stroke-linecap: square;
+                stroke-width: 2;
+              "
+            />
+            <text
+              x="142"
+              y="130"
+              style="font-size: 11px; text-anchor: end"
+              dominant-baseline="middle"
+              transform="rotate(0, 142, 130)"
+            >
+              UBD
+            </text>
+            <line
+              x1="150"
+              y1="50"
+              x2="115"
+              y2="50"
+              style="
+                stroke: var(--md-sys-color-on-background);
+                stroke-linecap: square;
+                stroke-width: 2;
+              "
+            />
+            <path
+              d="M 115,50 L 115,47 L 110,50 L 115,53 L 115,50"
+              style="
+                fill-opacity: 1;
+                fill: var(--md-sys-color-on-background);
+                stroke: var(--md-sys-color-on-background);
+                stroke-linecap: square;
+                stroke-width: 2;
+              "
+            />
+            <text
+              x="130"
+              y="38"
+              style="font-size: 11px; text-anchor: middle"
+              dominant-baseline="middle"
+              transform="rotate(0, 130, 38)"
+            >
+              UAB
+            </text>
+            <line
+              x1="180"
+              y1="90"
+              x2="180"
+              y2="95"
+              style="
+                stroke: var(--md-sys-color-on-background);
+                stroke-linecap: square;
+                stroke-width: 2;
+              "
+            />
+            <path
+              d="M 180,95 L 183,95 L 180,100 L 177,95 L 180,95"
+              style="
+                fill-opacity: 1;
+                fill: var(--md-sys-color-on-background);
+                stroke: var(--md-sys-color-on-background);
+                stroke-linecap: square;
+                stroke-width: 2;
+              "
+            />
+            <text
+              x="172"
+              y="95"
+              style="font-size: 11px; text-anchor: end"
+              dominant-baseline="middle"
+              transform="rotate(0, 172, 95)"
+            >
+              I1
+            </text>
+            <line
+              x1="180"
+              y1="80"
+              x2="380"
+              y2="80"
+              style="
+                stroke: var(--md-sys-color-on-background);
+                stroke-linecap: square;
+                stroke-width: 2;
+              "
+            />
+            <line
+              x1="280"
+              y1="80"
+              x2="280"
+              y2="110"
+              style="
+                stroke: var(--md-sys-color-on-background);
+                stroke-linecap: square;
+                stroke-width: 2;
+              "
+            />
+            <line
+              x1="280"
+              y1="150"
+              x2="280"
+              y2="180"
+              style="
+                stroke: var(--md-sys-color-on-background);
+                stroke-linecap: square;
+                stroke-width: 2;
+              "
+            />
+            <rect
+              x="272"
+              y="110"
+              width="16"
+              height="40"
+              style="
+                fill-opacity: 0;
+                fill: var(--md-sys-color-on-background);
+                stroke: var(--md-sys-color-on-background);
+                stroke-width: 2;
+              "
+            />
+            <text
+              x="266"
+              y="130"
+              style="font-size: 11px; text-anchor: end"
+              dominant-baseline="middle"
+              transform="rotate(0, 266, 130)"
+            >
+              R3
+            </text>
+            <line
+              x1="140"
+              y1="180"
+              x2="125"
+              y2="180"
+              style="
+                stroke: var(--md-sys-color-on-background);
+                stroke-linecap: square;
+                stroke-width: 2;
+              "
+            />
+            <path
+              d="M 125,180 L 125,177 L 120,180 L 125,183 L 125,180"
+              style="
+                fill-opacity: 1;
+                fill: var(--md-sys-color-on-background);
+                stroke: var(--md-sys-color-on-background);
+                stroke-linecap: square;
+                stroke-width: 2;
+              "
+            />
+            <text
+              x="130"
+              y="168"
+              style="font-size: 11px; text-anchor: middle"
+              dominant-baseline="middle"
+              transform="rotate(0, 130, 168)"
+            >
+              I
+            </text>
+            <line
+              x1="80"
+              y1="80"
+              x2="95"
+              y2="80"
+              style="
+                stroke: var(--md-sys-color-on-background);
+                stroke-linecap: square;
+                stroke-width: 2;
+              "
+            />
+            <path
+              d="M 95,80 L 95,77 L 100,80 L 95,83 L 95,80"
+              style="
+                fill-opacity: 1;
+                fill: var(--md-sys-color-on-background);
+                stroke: var(--md-sys-color-on-background);
+                stroke-linecap: square;
+                stroke-width: 2;
+              "
+            />
+            <text
+              x="90"
+              y="68"
+              style="font-size: 11px; text-anchor: middle"
+              dominant-baseline="middle"
+              transform="rotate(0, 90, 68)"
+            >
+              I
+            </text>
+            <line
+              x1="220"
+              y1="80"
+              x2="235"
+              y2="80"
+              style="
+                stroke: var(--md-sys-color-on-background);
+                stroke-linecap: square;
+                stroke-width: 2;
+              "
+            />
+            <path
+              d="M 235,80 L 235,77 L 240,80 L 235,83 L 235,80"
+              style="
+                fill-opacity: 1;
+                fill: var(--md-sys-color-on-background);
+                stroke: var(--md-sys-color-on-background);
+                stroke-linecap: square;
+                stroke-width: 2;
+              "
+            />
+            <text
+              x="230"
+              y="68"
+              style="font-size: 11px; text-anchor: middle"
+              dominant-baseline="middle"
+              transform="rotate(0, 230, 68)"
+            >
+              I2
+            </text>
+            <line
+              x1="80"
+              y1="180"
+              x2="380"
+              y2="180"
+              style="
+                stroke: var(--md-sys-color-on-background);
+                stroke-linecap: square;
+                stroke-width: 2;
+              "
+            />
+            <line
+              x1="180"
+              y1="80"
+              x2="180"
+              y2="110"
+              style="
+                stroke: var(--md-sys-color-on-background);
+                stroke-linecap: square;
+                stroke-width: 2;
+              "
+            />
+            <line
+              x1="180"
+              y1="150"
+              x2="180"
+              y2="180"
+              style="
+                stroke: var(--md-sys-color-on-background);
+                stroke-linecap: square;
+                stroke-width: 2;
+              "
+            />
+            <rect
+              x="172"
+              y="110"
+              width="16"
+              height="40"
+              style="
+                fill-opacity: 0;
+                fill: var(--md-sys-color-on-background);
+                stroke: var(--md-sys-color-on-background);
+                stroke-width: 2;
+              "
+            />
+            <text
+              x="166"
+              y="130"
+              style="font-size: 11px; text-anchor: end"
+              dominant-baseline="middle"
+              transform="rotate(0, 166, 130)"
+            >
+              R2
+            </text>
+            <line
+              x1="80"
+              y1="80"
+              x2="110"
+              y2="80"
+              style="
+                stroke: var(--md-sys-color-on-background);
+                stroke-linecap: square;
+                stroke-width: 2;
+              "
+            />
+            <line
+              x1="150"
+              y1="80"
+              x2="180"
+              y2="80"
+              style="
+                stroke: var(--md-sys-color-on-background);
+                stroke-linecap: square;
+                stroke-width: 2;
+              "
+            />
+            <rect
+              x="110"
+              y="72"
+              width="40"
+              height="16"
+              style="
+                fill-opacity: 0;
+                fill: var(--md-sys-color-on-background);
+                stroke: var(--md-sys-color-on-background);
+                stroke-width: 2;
+              "
+            />
+            <text
+              x="130"
+              y="66"
+              style="font-size: 11px; text-anchor: middle"
+              dominant-baseline="baseline"
+              transform="rotate(0, 130, 66)"
+            >
+              R1
+            </text>
+            <line
+              x1="80"
+              y1="180"
+              x2="80"
+              y2="143"
+              style="
+                stroke: var(--md-sys-color-on-background);
+                stroke-linecap: square;
+                stroke-width: 2;
+              "
+            />
+            <line
+              x1="80"
+              y1="117"
+              x2="80"
+              y2="80"
+              style="
+                stroke: var(--md-sys-color-on-background);
+                stroke-linecap: square;
+                stroke-width: 2;
+              "
+            />
+            <text
+              x="80"
+              y="130"
+              style="font-size: 12px; text-anchor: middle"
+              dominant-baseline="middle"
+              transform="rotate(0, 80, 130)"
+            >
+              G
+            </text>
+            <ellipse
+              cx="80"
+              cy="130"
+              rx="12"
+              ry="12"
+              style="
+                fill-opacity: 0;
+                fill: var(--md-sys-color-on-background);
+                stroke: var(--md-sys-color-on-background);
+                stroke-width: 2;
+              "
+            />
+            <ellipse
+              cx="180"
+              cy="80"
+              rx="2"
+              ry="2"
+              style="
+                fill-opacity: 1;
+                fill: var(--md-sys-color-on-background);
+                stroke: var(--md-sys-color-on-background);
+                stroke-width: 2;
+              "
+            />
+            <ellipse
+              cx="280"
+              cy="80"
+              rx="2"
+              ry="2"
+              style="
+                fill-opacity: 1;
+                fill: var(--md-sys-color-on-background);
+                stroke: var(--md-sys-color-on-background);
+                stroke-width: 2;
+              "
+            />
+            <ellipse
+              cx="280"
+              cy="180"
+              rx="2"
+              ry="2"
+              style="
+                fill-opacity: 1;
+                fill: var(--md-sys-color-on-background);
+                stroke: var(--md-sys-color-on-background);
+                stroke-width: 2;
+              "
+            />
+            <ellipse
+              cx="180"
+              cy="180"
+              rx="2"
+              ry="2"
+              style="
+                fill-opacity: 1;
+                fill: var(--md-sys-color-on-background);
+                stroke: var(--md-sys-color-on-background);
+                stroke-width: 2;
+              "
+            />
+          </svg>
+        </div>
+
+        <div class="right">
+          <p>
+            On mesure une tension électrique avec un Voltmètre qu’on place en
+            dérivation dans le circuit de sorte que la tension mesuré rentre par
+            la borne <b>+</b> et ressort par la borne <b>COM</b>.
+          </p>
+        </div>
+      </div>
+
+      <p>La tension <b>U</b> se mesure en <b>Volt [V]</b>.</p>
+      <p>
+        <b><u>Rappel :</u></b>
+      </p>
+
+      <ul>
+        <li>
+          millivolt :
+          <math display="inline">
+            <mi>1</mi>
+            <mi>m</mi>
+            <mi>V</mi>
+            <mo>=</mo>
+            <msup>
+              <mi>10</mi>
+              <mn>-3</mn>
+            </msup>
+            <mi>V</mi>
+          </math>
+        </li>
+        <li>
+          microvolt :
+          <math display="inline">
+            <mi>1</mi>
+            <mi>µ</mi>
+            <mi>V</mi>
+            <mo>=</mo>
+            <msup>
+              <mi>10</mi>
+              <mn>-6</mn>
+            </msup>
+            <mi>V</mi>
+          </math>
+        </li>
+        <li>
+          nanovolt :
+          <math display="inline">
+            <mi>1</mi>
+            <mi>n</mi>
+            <mi>V</mi>
+            <mo>=</mo>
+            <msup>
+              <mi>10</mi>
+              <mn>-9</mn>
+            </msup>
+            <mi>V</mi>
+          </math>
+        </li>
+        <li>
+          picovolt :
+          <math display="inline">
+            <mi>1</mi>
+            <mi>p</mi>
+            <mi>V</mi>
+            <mo>=</mo>
+            <msup>
+              <mi>10</mi>
+              <mn>-12</mn>
+            </msup>
+            <mi>V</mi>
+          </math>
+        </li>
+      </ul>
+    </div>
+
+    <div class="box2"><h2>II - Loi des nœuds</h2></div>
+
+    <div class="box2">
+      <p>
+        Un nœud électrique est un point du circuit où l’on trouve un partage du
+        courant électrique.
+      </p>
+
+      <div class="split">
+        <div class="left">
+          <svg
+            version="1.1"
+            width="280"
+            height="180"
+            viewBox="0 0 280 180"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <line
+              x1="140"
+              y1="40"
+              x2="240"
+              y2="40"
+              style="
+                stroke: var(--md-sys-color-on-background);
+                stroke-linecap: square;
+                stroke-width: 2;
+              "
+            />
+            <line
+              x1="240"
+              y1="40"
+              x2="240"
+              y2="70"
+              style="
+                stroke: var(--md-sys-color-on-background);
+                stroke-linecap: square;
+                stroke-width: 2;
+              "
+            />
+            <line
+              x1="240"
+              y1="110"
+              x2="240"
+              y2="140"
+              style="
+                stroke: var(--md-sys-color-on-background);
+                stroke-linecap: square;
+                stroke-width: 2;
+              "
+            />
+            <rect
+              x="232"
+              y="70"
+              width="16"
+              height="40"
+              style="
+                fill-opacity: 0;
+                fill: var(--md-sys-color-on-background);
+                stroke: var(--md-sys-color-on-background);
+                stroke-width: 2;
+              "
+            />
+            <text
+              x="140"
+              y="150"
+              style="font-size: 11px; text-anchor: start"
+              dominant-baseline="middle"
+              transform="rotate(0, 140, 150)"
+            >
+              B
+            </text>
+            <text
+              x="130"
+              y="30"
+              style="font-size: 11px; text-anchor: start"
+              dominant-baseline="middle"
+              transform="rotate(0, 130, 30)"
+            >
+              A
+            </text>
+            <line
+              x1="40"
+              y1="140"
+              x2="240"
+              y2="140"
+              style="
+                stroke: var(--md-sys-color-on-background);
+                stroke-linecap: square;
+                stroke-width: 2;
+              "
+            />
+            <line
+              x1="140"
+              y1="40"
+              x2="140"
+              y2="70"
+              style="
+                stroke: var(--md-sys-color-on-background);
+                stroke-linecap: square;
+                stroke-width: 2;
+              "
+            />
+            <line
+              x1="140"
+              y1="110"
+              x2="140"
+              y2="140"
+              style="
+                stroke: var(--md-sys-color-on-background);
+                stroke-linecap: square;
+                stroke-width: 2;
+              "
+            />
+            <rect
+              x="132"
+              y="70"
+              width="16"
+              height="40"
+              style="
+                fill-opacity: 0;
+                fill: var(--md-sys-color-on-background);
+                stroke: var(--md-sys-color-on-background);
+                stroke-width: 2;
+              "
+            />
+            <line
+              x1="40"
+              y1="40"
+              x2="70"
+              y2="40"
+              style="
+                stroke: var(--md-sys-color-on-background);
+                stroke-linecap: square;
+                stroke-width: 2;
+              "
+            />
+            <line
+              x1="110"
+              y1="40"
+              x2="140"
+              y2="40"
+              style="
+                stroke: var(--md-sys-color-on-background);
+                stroke-linecap: square;
+                stroke-width: 2;
+              "
+            />
+            <rect
+              x="70"
+              y="32"
+              width="40"
+              height="16"
+              style="
+                fill-opacity: 0;
+                fill: var(--md-sys-color-on-background);
+                stroke: var(--md-sys-color-on-background);
+                stroke-width: 2;
+              "
+            />
+            <line
+              x1="40"
+              y1="140"
+              x2="40"
+              y2="103"
+              style="
+                stroke: var(--md-sys-color-on-background);
+                stroke-linecap: square;
+                stroke-width: 2;
+              "
+            />
+            <line
+              x1="40"
+              y1="77"
+              x2="40"
+              y2="40"
+              style="
+                stroke: var(--md-sys-color-on-background);
+                stroke-linecap: square;
+                stroke-width: 2;
+              "
+            />
+            <text
+              x="40"
+              y="90"
+              style="font-size: 12px; text-anchor: middle"
+              dominant-baseline="middle"
+              transform="rotate(0, 40, 90)"
+            >
+              G
+            </text>
+            <ellipse
+              cx="40"
+              cy="90"
+              rx="12"
+              ry="12"
+              style="
+                fill-opacity: 0;
+                fill: var(--md-sys-color-on-background);
+                stroke: var(--md-sys-color-on-background);
+                stroke-width: 2;
+              "
+            />
+            <ellipse
+              cx="140"
+              cy="40"
+              rx="2"
+              ry="2"
+              style="
+                fill-opacity: 1;
+                fill: var(--md-sys-color-on-background);
+                stroke: var(--md-sys-color-on-background);
+                stroke-width: 2;
+              "
+            />
+            <ellipse
+              cx="140"
+              cy="140"
+              rx="2"
+              ry="2"
+              style="
+                fill-opacity: 1;
+                fill: var(--md-sys-color-on-background);
+                stroke: var(--md-sys-color-on-background);
+                stroke-width: 2;
+              "
+            />
+          </svg>
+        </div>
+
+        <div class="right">
+          <p>Ce montage compte 2 nœuds électriques : <b>A</b> et <b>B</b></p>
+        </div>
+      </div>
+
+      <p>
+        <b><u>Important :</u></b> Dans un nœud électrique, la somme des courants
+        entrants et égale à la somme des courants sortants.
+      </p>
+    </div>
+
+    <div class="box2">
+      <h1 class="red"><b>WORK IN PROGRESS</b></h1>
+      <h2 class="red">Attention, le cours n'est pas complet !</h2>
+    </div>
+
+    <div style="margin-top: 16px"></div>
+
+    <footer>
+      <div class="horizontal2">
+        <a href="mailto:kitsuneisfoxinjapanese@gmail.com" aria-label="Email"
+          ><div class="social-icon">
+            <!--Using the SVG tag allows me to dynamically change the colors based on the theme-->
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+              <title>email</title>
+              <path
+                d="M20,8L12,13L4,8V6L12,11L20,6M20,4H4C2.89,4 2,4.89 2,6V18A2,2 0 0,0 4,20H20A2,2 0 0,0 22,18V6C22,4.89 21.1,4 20,4Z"
+                fill="var(--md-sys-color-on-primary-container)"
+              />
+            </svg></div
+        ></a>
+
+        <a
+          href="https://github.com/The-weeb-is-doing-stuff"
+          aria-label="Github"
+          target="”_blank”"
+        >
+          <div class="social-icon">
+            <!--Using the SVG tag allows me to dynamically change the colors based on the theme-->
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+              <title>github</title>
+              <path
+                d="M12,2A10,10 0 0,0 2,12C2,16.42 4.87,20.17 8.84,21.5C9.34,21.58 9.5,21.27 9.5,21C9.5,20.77 9.5,20.14 9.5,19.31C6.73,19.91 6.14,17.97 6.14,17.97C5.68,16.81 5.03,16.5 5.03,16.5C4.12,15.88 5.1,15.9 5.1,15.9C6.1,15.97 6.63,16.93 6.63,16.93C7.5,18.45 8.97,18 9.54,17.76C9.63,17.11 9.89,16.67 10.17,16.42C7.95,16.17 5.62,15.31 5.62,11.5C5.62,10.39 6,9.5 6.65,8.79C6.55,8.54 6.2,7.5 6.75,6.15C6.75,6.15 7.59,5.88 9.5,7.17C10.29,6.95 11.15,6.84 12,6.84C12.85,6.84 13.71,6.95 14.5,7.17C16.41,5.88 17.25,6.15 17.25,6.15C17.8,7.5 17.45,8.54 17.35,8.79C18,9.5 18.38,10.39 18.38,11.5C18.38,15.32 16.04,16.16 13.81,16.41C14.17,16.72 14.5,17.33 14.5,18.26C14.5,19.6 14.5,20.68 14.5,21C14.5,21.27 14.66,21.59 15.17,21.5C19.14,20.16 22,16.42 22,12A10,10 0 0,0 12,2Z"
+                fill="var(--md-sys-color-on-primary-container)"
+              />
+            </svg></div
+        ></a>
+
+        <a
+          href="https://www.youtube.com/@The-weeb-is-doing-stuff"
+          aria-label="YouTube"
+          target="”_blank”"
+        >
+          <div class="social-icon">
+            <!--Using the SVG tag allows me to dynamically change the colors based on the theme-->
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+              <title>youtube</title>
+              <path
+                d="M10,15L15.19,12L10,9V15M21.56,7.17C21.69,7.64 21.78,8.27 21.84,9.07C21.91,9.87 21.94,10.56 21.94,11.16L22,12C22,14.19 21.84,15.8 21.56,16.83C21.31,17.73 20.73,18.31 19.83,18.56C19.36,18.69 18.5,18.78 17.18,18.84C15.88,18.91 14.69,18.94 13.59,18.94L12,19C7.81,19 5.2,18.84 4.17,18.56C3.27,18.31 2.69,17.73 2.44,16.83C2.31,16.36 2.22,15.73 2.16,14.93C2.09,14.13 2.06,13.44 2.06,12.84L2,12C2,9.81 2.16,8.2 2.44,7.17C2.69,6.27 3.27,5.69 4.17,5.44C4.64,5.31 5.5,5.22 6.82,5.16C8.12,5.09 9.31,5.06 10.41,5.06L12,5C16.19,5 18.8,5.16 19.83,5.44C20.73,5.69 21.31,6.27 21.56,7.17Z"
+                fill="var(--md-sys-color-on-primary-container)"
+              />
+            </svg></div
+        ></a>
+      </div>
+
+      <div>
+        Ce site est placé sous la licence du
+        <a
+          href="https://www.gnu.org/licenses/gpl-3.0.en.html"
+          aria-label="GNU GPLv3"
+          target="”_blank”"
+          >GNU GPLv3</a
+        >.
+      </div>
+    </footer>
+
+    <!--The links to the color files are in the "body" tag because we cannot have a "span" tag in the "head" tag-->
+
+    <span id="span-colors">
+      <link rel="stylesheet" href="../css/colors/cyan_light.css" />
+      <link rel="stylesheet" href="../css/colors/cyan_dark.css" />
+    </span>
+
+    <!--The link to the "script" file is in the "body" tag to execute the file when the page loads-->
+
+    <script type="text/javascript" src="../js/script.js"></script>
+  </body>
+</html>

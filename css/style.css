@@ -53,6 +53,15 @@ li {
   padding-bottom: 16px;
 }
 
+svg {
+  margin-left: auto;
+  margin-right: auto;
+
+  max-width: 100%;
+
+  fill: var(--md-sys-color-on-background);
+}
+
 .horizontal1 {
   display: grid;
   grid-template-columns: auto auto auto;
@@ -72,12 +81,16 @@ li {
   margin-bottom: 8px;
 }
 
+.red {
+  color: var(--md-sys-color-error);
+}
+
 /****** header ******/
 
 /*** theme and color button ***/
 
 header {
-  z-index: 2;
+  z-index: 3;
 
   font-size: 16px;
   font-weight: bold;
@@ -207,6 +220,23 @@ header li a:hover,
   padding: 21px;
 }
 
+/*** linear gradient ***/
+
+.linear-gradient {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 15vh;
+  z-index: 2;
+
+  background: linear-gradient(
+    to bottom,
+    var(--md-sys-color-surface),
+    rgba(0, 0, 0, 0)
+  );
+}
+
 /****** box1 ******/
 
 .box1 {
@@ -241,6 +271,98 @@ header li a:hover,
 
   font-size: 24px;
   text-align: center;
+}
+
+/****** box2 ******/
+
+.box2 {
+  z-index: 1;
+  float: left;
+
+  display: flex;
+  flex-direction: column;
+
+  border-radius: 24px;
+  background-color: var(--md-sys-color-surface-container);
+
+  margin: 16px 0;
+  padding: 16px;
+
+  color: var(--md-sys-color-on-background);
+  text-align: center;
+}
+
+.box2 .split {
+  display: flex;
+  justify-content: space-between;
+}
+
+.box2 .split .left,
+.box2 .split .right {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.box2 .split .left {
+  float: left;
+
+  width: 50%;
+}
+
+.box2 .split .right {
+  float: right;
+
+  width: 50%;
+}
+
+.box2 ul {
+  text-align: left;
+}
+
+.box2 math {
+  font-weight: bold;
+}
+
+/****** cards ******/
+
+.cards {
+  z-index: 1;
+  float: left;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+
+  border-radius: 24px;
+  background-color: var(--md-sys-color-surface-container);
+
+  padding: 16px;
+
+  color: var(--md-sys-color-on-background);
+  text-decoration: none;
+  font-weight: bold;
+
+  transition: background-color ease-in-out 0.2s, color ease-in-out 0.2s;
+}
+
+/*animate on hover*/
+
+.cards:hover {
+  background-color: var(--md-sys-color-primary-container);
+  color: var(--md-sys-color-on-primary-container);
+
+  transition: background-color ease-in-out 0.2s, color ease-in-out 0.2s;
+}
+
+.cards img {
+  border-radius: 16px;
+
+  height: 400px;
+  object-fit: cover;
+
+  margin-bottom: 16px;
 }
 
 /****** footer ******/
@@ -301,47 +423,6 @@ footer div a:hover {
   transition: color ease-in-out 0.2s;
 }
 
-/****** cards ******/
-
-.cards {
-  z-index: 1;
-  float: left;
-
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: center;
-
-  border-radius: 24px;
-  background-color: var(--md-sys-color-surface-container);
-
-  padding: 16px;
-
-  color: var(--md-sys-color-on-background);
-  text-decoration: none;
-  font-weight: bold;
-
-  transition: background-color ease-in-out 0.2s, color ease-in-out 0.2s;
-}
-
-/*animate on hover*/
-
-.cards:hover {
-  background-color: var(--md-sys-color-primary-container);
-  color: var(--md-sys-color-on-primary-container);
-
-  transition: background-color ease-in-out 0.2s, color ease-in-out 0.2s;
-}
-
-.cards img {
-  border-radius: 16px;
-
-  height: 400px;
-  object-fit: cover;
-
-  margin-bottom: 16px;
-}
-
 /****** other devices ******/
 
 @media (max-width: 1500px) {
@@ -377,5 +458,17 @@ footer div a:hover {
 
   .box1 h1 {
     font-size: 90px;
+  }
+
+  .box2 .split {
+    flex-direction: column;
+  }
+
+  .box2 .split .left {
+    width: 100%;
+  }
+
+  .box2 .split .right {
+    width: 100%;
   }
 }

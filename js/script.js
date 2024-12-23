@@ -196,34 +196,34 @@ function colorBlind() {
 /* Language button */
 
 /*
-If the path name is equal to "/en/projects.html" or "/fr/projets.html"
-    Display "../fr/projets.html"
+If the path name is equal to "/en/lessons.html" or "/fr/cours.html"
+    Display "../fr/cours.html"
 Else
     Display "../fr/accueil.html"
 */
 function fr() {
   if (
-    window.location.pathname == "/en/projects.html" ||
-    window.location.pathname == "/fr/projets.html"
+    window.location.pathname == "/en/lessons.html" ||
+    window.location.pathname == "/fr/cours.html"
   ) {
-    window.location.href = "../fr/projets.html";
+    window.location.href = "../fr/cours.html";
   } else {
     window.location.href = "../fr/accueil.html";
   }
 }
 
 /*
-If the path name is equal to "/fr/projets.html" or "/en/projects.html"
-    Display "../en/projects.html"
+If the path name is equal to "/fr/cours.html" or "/en/lessons.html"
+    Display "../en/lessons.html"
 Else
     Display "../en/home.html"
 */
 function en() {
   if (
-    window.location.pathname == "/fr/projets.html" ||
-    window.location.pathname == "/en/projects.html"
+    window.location.pathname == "/fr/cours.html" ||
+    window.location.pathname == "/en/lessons.html"
   ) {
-    window.location.href = "../en/projects.html";
+    window.location.href = "../en/lessons.html";
   } else {
     window.location.href = "../en/home.html";
   }
